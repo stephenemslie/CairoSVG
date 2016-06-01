@@ -441,8 +441,8 @@ class PNGSurface(Surface):
 
     def _create_surface(self, width, height):
         """Create and return ``(cairo_surface, width, height)``."""
-        width = int(width)
-        height = int(height)
+        width = round(width)
+        height = round(height)
         cairo_surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
         return cairo_surface, width, height
 
